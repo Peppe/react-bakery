@@ -1,0 +1,40 @@
+.header {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height:64px;
+  background: #fff;
+  box-shadow: 0 0 16px 2px hsla(214, 27%, 26%, 0.21);
+}
+
+.header .logo {
+  height:32px;
+}
+
+.header .views {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  height:100%;
+}
+
+.header .views .container {
+  display:flex;
+  height:100%;
+}
+
+.header .avatar {
+  display:flex;
+  align-items: center;
+  height:100%;
+  color: rgba(48, 64, 84, 0.71);
+}
+.header .avatar img {
+  border-radius: 50%;
+  height:32px;
+  width:32px;
+}
+.header .avatar div {
+  margin-left:4px
+}

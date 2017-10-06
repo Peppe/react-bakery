@@ -1,0 +1,26 @@
+{
+  "name": "Vaadin Bakery for React",
+  "authors": [
+    "Jens Jansson <peppe@vaadin.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "CVAL",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vaadin-board": "^1.0.1",
+    "vaadin-checkbox": "vaadin/vaadin-checkbox#^1.0.0-beta1",
+    "vaadin-charts": "6.0-preview",
+    "vaadin-date-picker": "^2.0.5",
+    "vaadin-text-field": "vaadin/vaadin-text-field#^1.0.0",
+    "vaadin-valo-theme": "vaadin/vaadin-valo-theme#^0.3.2"
+  }
+}

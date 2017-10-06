@@ -1,0 +1,17 @@
+html, body, #root {
+  height:100%;
+  background-color:#fff;
+}
+.App {
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", Ubuntu, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: rgba(48, 64, 84, 0.91);
+  background-color:  hsla(214, 27%, 26%, 0.11);
+  display:flex;
+  flex-direction: column;
+  height:100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", Ubuntu, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: rgba(48, 64, 84, 0.91);
+}
