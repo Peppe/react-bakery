@@ -1,3 +1,11 @@
+# Live Demo
+
+[http://jens.app.fi/react-bakery/](http://jens.app.fi/react-bakery/)
+
+This project combines React and Vaadin Elements to see how well they work together. 
+
+## Overview
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
