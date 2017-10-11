@@ -4,94 +4,129 @@ import './OrderList.css';
 class OrderList extends Component {
 
   render() {
-    // const orders = [
-    //   {
-    //     key: 1,
-    //     name: "one",
-    //     order: "hey",
-    //   },
-    //   {
-    //     key: 2,
-    //     name: "two",
-    //     order: "hey",
-    //   },
-    //   {
-    //     key: 3,
-    //     name: "three",
-    //     order: "hey",
-    //   },
-    //   {
-    //     key: 4,
-    //     name: "four",
-    //     order: "hey",
-    //   },
-    //   {
-    //     key: 5,
-    //     name: "five",
-    //     order: "hey",
-    //   }];
-    // const listItems = orders.map((number) =>
-    //   <li key={number.key}>
-    //     {number.name}
-    //   </li>
-    // );
+    const orders = [
+      {
+        key: 1,
+        name: "Haley Cortez",
+        order: "hey",
+        status: "ready",
+        day: "",
+        time: "13:00 PM",
+        location: "Store"
+      },
+      {
+        key: 2,
+        name: "Elaine LeBlanc",
+        order: "hey",
+        status: "ready",
+        day: "",
+        time: "18:00 PM",
+        location: "Bakery"
+      },
+      {
+        key: 3,
+        name: "Jessica Carver",
+        order: "hey",
+        status: "new",
+        day: "Thu 12",
+        time: "13:00 PM",
+        location: "Store"
+      },
+      {
+        key: 4,
+        name: "Kerry Rich",
+        order: "hey",
+        status: "problem",
+        day: "Thu 13",
+        time: "10:00 AM",
+        location: "Store"
+      },
+      {
+        key: 5,
+        name: "Octavia Moore",
+        order: "hey",
+        status: "cancelled",
+        day: "Fri 13",
+        time: "14:00 PM",
+        location: "Bakery"
+      },
+      {
+        key: 6,
+        name: "Sylvia Blevins",
+        order: "hey",
+        status: "cancelled",
+        day: "Fri 13",
+        time: "14:00 PM",
+        location: "Bakery"
+      },
+      {
+        key: 7,
+        name: "Ferdinand Carver",
+        order: "hey",
+        status: "cancelled",
+        day: "Fri 13",
+        time: "14:00 PM",
+        location: "Bakery"
+      },
+      {
+        key: 8,
+        name: "Haley Lyons",
+        order: "hey",
+        status: "cancelled",
+        day: "Fri 13",
+        time: "14:00 PM",
+        location: "Bakery"
+      },
+      {
+        key: 9,
+        name: "Lael Maldonado",
+        order: "hey",
+        status: "cancelled",
+        day: "Fri 13",
+        time: "14:00 PM",
+        location: "Bakery"
+      },
+      {
+        key: 10,
+        name: "Skyler Patton",
+        order: "hey",
+        status: "cancelled",
+        day: "Fri 13",
+        time: "14:00 PM",
+        location: "Bakery"
+      }];
+    const json = JSON.stringify(orders)
     return (
       <div>
-        <vaadin-grid items='[{"name": "John", "surname": "Lennon", "role": "singer"},{"name": "Ringo", "surname": "Starr", "role": "drums"}]'>
+        <vaadin-grid items={json}>
           <vaadin-grid-column>
-            <template className="header">Name</template>
-            <template>[[item.name]]</template>
+            <Template className="header">{'Status'}</Template>
+            <Template>{'[[item.status]]'}</Template>
           </vaadin-grid-column>
           <vaadin-grid-column>
-            <template className="header">Surname</template>
-            <template>[[item.surname]]</template>
+            <Template className="header">{'Delivery'}</Template>
+            <Template>{
+              '[[item.day]]<br/>'+
+              '[[item.time]]<br/>'+
+              '[[item.location]]'
+            }</Template>
           </vaadin-grid-column>
           <vaadin-grid-column>
-            <template className="header">Role</template>
-            <template>[[item.role]]</template>
+            <Template className="header">{'Order'}</Template>
+            <Template>{'[[item.name]]'}</Template>
           </vaadin-grid-column>
         </vaadin-grid>
-        {/* <ul>{listItems}</ul> */}
-        {/* <vaadin-grid items="[[users.result]]">
-          <vaadin-grid-column width="50px" flex-grow="0">
-            <template className="header">#</template>
-            <template>[[index]]</template>
-
-            <template className="footer">#</template>
-          </vaadin-grid-column>
-
-          <vaadin-grid-column>
-            <template className="header">
-              <span draggable="true">
-                First Name
-          </span>
-            </template>
-            <template>
-              <span draggable="true">
-                [[item.firstName]]
-          </span>
-            </template>
-            <template className="footer">First Name</template>
-          </vaadin-grid-column>
-
-          <vaadin-grid-column>
-            <template className="header">Last Name</template>
-            <template>[[item.lastName]]</template>
-            <template className="footer">Last Name</template>
-          </vaadin-grid-column>
-
-          <vaadin-grid-column width="150px">
-            <template className="header">Address</template>
-            <template>
-              <p style={{whiteSpace: 'normal'}}>[[item.address.street]], [[item.address.city]]</p>
-            </template>
-            <template className="footer">Address</template>
-          </vaadin-grid-column>
-
-        </vaadin-grid> */}
       </div>
     );
   }
-}
 
+}
+function Template({ children, ...attrs }) {
+  return (
+    <template
+      {...attrs}
+      dangerouslySetInnerHTML={{ __html: children }}
+    />
+  );
+}
 export default OrderList;
