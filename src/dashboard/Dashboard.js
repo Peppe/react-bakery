@@ -31,7 +31,7 @@ class Dashboard extends Component {
           <vaadin-board-row>
           <YearlySales />
           </vaadin-board-row>
-          <vaadin-board-row>
+          <vaadin-board-row class="lastRow">
             <ProductSplit />
             <OrderList />
           </vaadin-board-row>

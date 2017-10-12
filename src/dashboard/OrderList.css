@@ -1,4 +1,7 @@
+.order-list-wrapper {
+  height: 100%;
+}
 
-.template {
-  
+.order-list-wrapper vaadin-grid {
+  height: 100%;
 }

@@ -60,9 +60,19 @@ class YearlySales extends Component {
     );
   }
   componentDidMount() {
-    if (this.myChart) {
-      this.myChart.update(this.options);
-    }
+    const myChart = this.myChart
+    const timer = () => {
+      if (myChart && myChart.update) {
+        myChart.update(this.options);
+      } else {
+        console.log(myChart);
+        console.log(myChart.update)
+      }
+    };
+    setTimeout( timer, 2000 )
+    window.addEventListener('WebComponentsReady', function(e) {
+
+    });
   }
 }
 

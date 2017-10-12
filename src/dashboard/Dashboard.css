@@ -25,6 +25,10 @@
   padding: 0 32px;
 }
 
+.lastRow {
+  height:400px;
+}
+
 @media screen and (min-width: 900px) {
   .controls {
       flex-direction:row;

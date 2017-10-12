@@ -97,7 +97,7 @@ class OrderList extends Component {
       }];
     const json = JSON.stringify(orders)
     return (
-      <div>
+      <div className="order-list-wrapper">
         <vaadin-grid items={json}>
           <vaadin-grid-column>
             <Template className="header">{'Status'}</Template>
@@ -105,15 +105,15 @@ class OrderList extends Component {
           </vaadin-grid-column>
           <vaadin-grid-column>
             <Template className="header">{'Delivery'}</Template>
-            <Template>{
-              '[[item.day]]<br/>'+
+            <Template>{{day ? 'foo' : 'bar'}
+              '<h3>[[item.day]]</h3>'+
               '[[item.time]]<br/>'+
               '[[item.location]]'
             }</Template>
           </vaadin-grid-column>
           <vaadin-grid-column>
             <Template className="header">{'Order'}</Template>
-            <Template>{'[[item.name]]'}</Template>
+            <Template>{'<h3>[[item.name]]</h3>'}</Template>
           </vaadin-grid-column>
         </vaadin-grid>
       </div>

@@ -83,7 +83,7 @@ class ProductSplit extends Component {
     );
   }
   componentDidMount() {
-    if (this.myChart) {
+    if (this.myChart && this.myChart.update) {
       this.myChart.update(this.options);
     }
   }
