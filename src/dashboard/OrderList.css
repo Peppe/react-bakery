@@ -5,3 +5,7 @@
 .order-list-wrapper vaadin-grid {
   height: 100%;
 }
+
+.order-list-wrapper h3 {
+  margin: 0;
+}

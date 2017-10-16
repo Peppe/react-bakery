@@ -10,7 +10,7 @@ class OrderList extends Component {
         name: "Haley Cortez",
         order: "hey",
         status: "ready",
-        day: "",
+        day: "Wed 11",
         time: "13:00 PM",
         location: "Store"
       },
@@ -19,7 +19,7 @@ class OrderList extends Component {
         name: "Elaine LeBlanc",
         order: "hey",
         status: "ready",
-        day: "",
+        day: "Wed 11",
         time: "18:00 PM",
         location: "Bakery"
       },
@@ -105,7 +105,9 @@ class OrderList extends Component {
           </vaadin-grid-column>
           <vaadin-grid-column>
             <Template className="header">{'Delivery'}</Template>
-            <Template>{{day ? 'foo' : 'bar'}
+            
+            <Template>
+              {
               '<h3>[[item.day]]</h3>'+
               '[[item.time]]<br/>'+
               '[[item.location]]'
