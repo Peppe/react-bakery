@@ -1,0 +1,42 @@
+<dom-module id="vaadin-charts-custom-theme" theme-for="vaadin-chart">
+  <template>
+    <style include="vaadin-charts-default-theme">
+       :host(.transparent) .highcharts-background {
+        fill: transparent;
+      }
+
+      .highcharts-title {
+        fill: rgba(42, 71, 110, 0.6);
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      :host(#column-chart) .highcharts-color-1 {
+        fill: rgba(34, 70, 117, 0.5);
+      }
+      
+      :host(#column-chart) .highcharts-color-1.highcharts-point-hover {
+        fill: rgba(24, 119, 242, 0.5);
+      }
+      
+      :host(#sales-chart) .highcharts-area {
+        fill-opacity: 0.1;
+      }
+
+      :host(#sales-chart) .highcharts-color-0 {
+        fill: #18ddf2;
+        stroke: #18ddf2;
+      }
+      
+      :host(#sales-chart) .highcharts-color-1 {
+        fill: #1877f3;
+        stroke: #1877f3;
+      }
+      
+      :host(#sales-chart) .highcharts-color-2 {
+        fill: #1bca66;
+        stroke: #1bca66;
+      }
+    </style>
+  </template>
+</dom-module> 

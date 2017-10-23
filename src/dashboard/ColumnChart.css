@@ -1,9 +1,13 @@
 .column-chart-wrapper {
   box-shadow: 0 2px 5px 0 rgba(23, 68, 128, 0.1);
   border-radius: 4px;
-  @apply --margin-style;
-  @apply --column-chart-height;
+  padding:12px 6px;
+  box-sizing: border-box;
 }
 .column-chart-wrapper .highcharts-color-1 {
   color: red;
+}
+
+#column-chart {
+  height: 150px; 
 }

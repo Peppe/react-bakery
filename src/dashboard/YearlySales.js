@@ -15,7 +15,6 @@ class YearlySales extends Component {
       },
       chart: {
         borderRadius: 4,
-        backgroundColor: '#ffffff', /* needs to be moved to css */
         type: 'areaspline'
       },
       colors: ["#18ddf2", "#1877f3", "#1bca66"], /* This needs to go to CSS to work. */
@@ -40,6 +39,9 @@ class YearlySales extends Component {
         },
         gridLineColor: 'rgba(23, 68, 128, 0.1)'  /* move to css.... */
       },
+      exporting: {
+        enabled: false
+      },
       legend: {
         backgroundColor:  'rgba(0, 0, 0, 0)',
         symbolRadius: 6,
@@ -55,23 +57,19 @@ class YearlySales extends Component {
 
     return (
       <div className="sales-chart-wrapper" >
-        <vaadin-chart id="sales-chart" ref={c => this.myChart = c}></vaadin-chart>
+        <vaadin-chart class="transparent" id="sales-chart" ref={c => this.myChart = c}></vaadin-chart>
       </div>
     );
   }
   componentDidMount() {
     const myChart = this.myChart
-    const timer = () => {
+    const update = () => {
       if (myChart && myChart.update) {
         myChart.update(this.options);
-      } else {
-        console.log(myChart);
-        console.log(myChart.update)
       }
     };
-    setTimeout( timer, 2000 )
-    window.addEventListener('WebComponentsReady', function(e) {
-
+    window.addEventListener('WebComponentsReady', function (e) {
+      update();
     });
   }
 }

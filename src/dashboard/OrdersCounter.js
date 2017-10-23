@@ -10,8 +10,7 @@ class OrdersCounter extends Component {
         text: ''
       },
       chart: {
-        backgroundColor: '#ff0000', /* needs to be moved to css */
-        type: 'line', /* should be solidgauge but missing js file */
+        type: 'pie' /* should be solidgauge but throws error */
       },
       series: [{
         name: 'Orders',
@@ -43,24 +42,27 @@ class OrdersCounter extends Component {
           }
         }
       },
-
-      /* did not see any exporting features anyhow 
-      <exporting enabled="false"></exporting>
-      */
-
-      /* chart breaks if i add 'pane: ' to the configuration
-      <pane start-angle="0" end-angle="360">
-        <background background-color="rgba(23, 68, 128, 0.1)" inner-radius="100%" outer-radius="110%"
-          shape="arc" border-width="0"></background>
-      </pane>
-      */
+      exporting: {
+        enabled: false
+      },
+      pane: {
+        startAngle: 0,
+        endAngle: 360,
+        background: {
+          backgroundColor: 'rgba(23, 68, 128, 0.1)', /* TODO: to css? */
+          borderWidth: '0', /* TODO: to css? */
+          shape: 'arc',
+          innerRadius: '100%',
+          outerRadius: '110%'
+        }
+      }
     };
 
     return (
       <div className="orders-counter">
         <div className='chart-wrapper' ref={c => this.myDiv = c}>
         {this.props.displayChart &&
-            <vaadin-chart id="solid-gauge" ref={c => this.myChart = c} title="foo"></vaadin-chart>
+            <vaadin-chart class="transparent" id="solid-gauge" ref={c => this.myChart = c} title="foo"></vaadin-chart>
         }
         </div>
         <div className="count-wrapper">
@@ -74,9 +76,15 @@ class OrdersCounter extends Component {
   }
 
   componentDidMount() {
-    if (this.myChart) {
-      this.myChart.update(this.options);
-    }
+    const myChart = this.myChart
+    const update = () => {
+      if (myChart && myChart.update) {
+        myChart.update(this.options);
+      }
+    };
+    window.addEventListener('WebComponentsReady', function (e) {
+      update();
+    });
   }
 }
 

@@ -15,8 +15,10 @@ class ProductSplit extends Component {
       },
       chart: {
         borderRadius: 4,
-        backgroundColor: '#ffffff', /* needs to be moved to css */
         type: 'pie',
+      },
+      exporting: {
+        enabled: false
       },
       series: [{
         name: 'Count',
@@ -83,9 +85,15 @@ class ProductSplit extends Component {
     );
   }
   componentDidMount() {
-    if (this.myChart && this.myChart.update) {
-      this.myChart.update(this.options);
-    }
+    const myChart = this.myChart
+    const update = () => {
+      if (myChart && myChart.update) {
+        myChart.update(this.options);
+      }
+    };
+    window.addEventListener('WebComponentsReady', function (e) {
+      update();
+    });
   }
 }
 
