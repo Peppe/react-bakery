@@ -39,6 +39,9 @@ class YearlySales extends Component {
         },
         gridLineColor: 'rgba(23, 68, 128, 0.1)'  /* move to css.... */
       },
+      credits: {
+        enabled: false
+      },
       exporting: {
         enabled: false
       },

@@ -10,7 +10,7 @@ class OrdersCounter extends Component {
         text: ''
       },
       chart: {
-        type: 'pie' /* should be solidgauge but throws error */
+        type: 'solidgauge' /* should be solidgauge but throws error */
       },
       series: [{
         name: 'Orders',
@@ -21,17 +21,24 @@ class OrdersCounter extends Component {
           innerRadius: '100%'
         }]
       }],
-      tooltip: { /*needs the plotoptions item to work?*/
+      tooltip: {
         enabled: 'false'
       },
-      yAxis: {
+      credits: {
+        enabled: false
+      },
+      yAxis: [{
         lineWidth: 0,
         minorTickWidth: 0,
         tickWidth: 0,
         labels: {
           enabled: false
+        },
+        center: {
+          y: 0,
+          x: 0
         }
-      },
+      }],
       plotOptions: {
         solidgauge: {
           dataLabels: {
@@ -42,7 +49,7 @@ class OrdersCounter extends Component {
           }
         }
       },
-      exporting: {
+      exporting: { // A bit annoying that I have to explicetly disable the exporting everywhere.
         enabled: false
       },
       pane: {
@@ -62,7 +69,7 @@ class OrdersCounter extends Component {
       <div className="orders-counter">
         <div className='chart-wrapper' ref={c => this.myDiv = c}>
         {this.props.displayChart &&
-            <vaadin-chart class="transparent" id="solid-gauge" ref={c => this.myChart = c} title="foo"></vaadin-chart>
+            <vaadin-chart class="transparent solidchart" id="solid-gauge" ref={c => this.myChart = c} title="foo"></vaadin-chart>
         }
         </div>
         <div className="count-wrapper">

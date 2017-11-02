@@ -11,6 +11,10 @@
         font-weight: bold;
       }
 
+      :host(#column-chart) #chart {
+        height: 150px;
+      }
+
       :host(#column-chart) .highcharts-color-1 {
         fill: rgba(34, 70, 117, 0.5);
       }
@@ -36,6 +40,15 @@
       :host(#sales-chart) .highcharts-color-2 {
         fill: #1bca66;
         stroke: #1bca66;
+      }
+
+      :host(.solidchart) #chart{
+        height: 120px;
+      }
+
+      :host(.solidchart) .highcharts-color-0 {
+        fill: rgba(23, 68, 128, 0.1);
+        stroke: rgba(23, 68, 128, 0.1);
       }
     </style>
   </template>

@@ -4,9 +4,6 @@
   padding:12px 6px;
   box-sizing: border-box;
 }
-.column-chart-wrapper .highcharts-color-1 {
-  color: red;
-}
 
 #column-chart {
   height: 150px; 
