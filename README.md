@@ -4,18 +4,14 @@
 
 This project combines React and Vaadin Elements to see how well they work together. 
 
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
 ## How to run
 - Clone repository
 - Run `npm install` within root folder
 - Run `bower install` within `public` folder
 - Run `npm start` within root folder
-
-## Overview
-
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+- Run `npm run build` within the root folder to create a deployable package
 
 ## Table of Contents
 

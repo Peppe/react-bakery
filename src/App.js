@@ -9,18 +9,20 @@ import Users from './users/Users';
 
 
 class App extends Component {
+  
   render() {
+    const baseUrl = process.env.PUBLIC_URL;
     return (
         <Router>
           <div className="App">
             <Header />
             <div className="content">
               <Switch>
-                <Route exact path="/" component={Dashboard}/>
-                <Route path="/storefront" component={Storefront} />
-                <Route path="/dashboard" component={Dashboard} />
-                <Route path="/users" component={Users} />
-                <Route path="/products" component={Products} />
+                <Route exact path={baseUrl + "/"} component={Dashboard}/>
+                <Route path={baseUrl + "/storefront"} component={Storefront} />
+                <Route path={baseUrl + "/dashboard"} component={Dashboard} />
+                <Route path={baseUrl + "/users"} component={Users} />
+                <Route path={baseUrl + "/products"} component={Products} />
               </Switch>
             </div>
           </div>
