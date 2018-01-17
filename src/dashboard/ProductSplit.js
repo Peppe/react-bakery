@@ -91,9 +91,13 @@ class ProductSplit extends Component {
         myChart.update(this.options);
       }
     };
-    window.addEventListener('WebComponentsReady', function (e) {
+    if (window.WebComponents.ready){
       update();
-    });
+    } else {
+      window.addEventListener('WebComponentsReady', function (e) {
+        update();
+      });
+    }
   }
 }
 

@@ -17,11 +17,11 @@
   ],
   "dependencies": {
     "vaadin-board": "^1.0.1",
-    "vaadin-checkbox": "vaadin/vaadin-checkbox#^1.0.0-beta1",
-    "vaadin-charts": "6.0-preview",
+    "vaadin-checkbox": "^1.0.0-beta1",
+    "vaadin-charts": "^v6.0.0-alpha6",
     "vaadin-date-picker": "^2.0.5",
-    "vaadin-text-field": "vaadin/vaadin-text-field#^1.0.0",
-    "vaadin-valo-theme": "vaadin/vaadin-valo-theme#^0.3.2",
-    "vaadin-grid": "v4.0.0-alpha4"
+    "vaadin-text-field": "^1.0.0",
+    "vaadin-valo-theme": "^0.3.2",
+    "vaadin-grid": "^v4.0.0-alpha4"
   }
 }
