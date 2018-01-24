@@ -5,7 +5,8 @@
   align-items: center;
   height:64px;
   background: #fff;
-  box-shadow: 0 0 16px 2px hsla(214, 27%, 26%, 0.21);
+  box-shadow: 0 0 16px 2px hsla(214, 90%, 15%, 0.2);
+  z-index: 3;
 }
 
 .header .logo {

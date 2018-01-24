@@ -24,7 +24,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .content {
-  padding:8px;
   flex: 1;
   display:flex;
   height:100%;

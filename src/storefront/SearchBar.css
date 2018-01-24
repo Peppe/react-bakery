@@ -1,0 +1,42 @@
+.storefront .searchbar {
+  background-image: linear-gradient(hsla(214, 90%, 15%, 0.2),hsla(214, 90%, 15%, 0.2));
+  background-color: #fff;
+  box-shadow: 0 0 16px 2px hsla(214, 90%, 15%, 0.2);
+  padding: 0 8px;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  z-index:2;
+}
+
+.storefront .searchbar .wrapper {
+  width:100%;
+  max-width: 964px;
+  margin: 0 auto;
+  display:flex;
+}
+
+.storefront .searchbar .searchbar-search {
+  flex: 1;
+}
+
+.storefront .searchbar iron-icon {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin-right:6px;
+}
+
+.storefront .searchbar .searchbar-new {
+}
+
+.storefront .searchbar .searchbar-past {
+  display: none;
+}
+
+
+.storefront .searchbar .searchbar-clear {
+  display: none;
+}
+
+
