@@ -18,9 +18,8 @@ class App extends Component {
             <Header />
             <div className="content">
               <Switch>
-                <Route exact path={baseUrl + "/"} component={Dashboard}/>
                 <Route path={baseUrl + "/storefront"} component={Storefront} />
-                <Route path={baseUrl + "/dashboard"} component={Dashboard} />
+                <Route exact path={baseUrl + "/"} component={Dashboard} />
                 <Route path={baseUrl + "/users"} component={Users} />
                 <Route path={baseUrl + "/products"} component={Products} />
               </Switch>

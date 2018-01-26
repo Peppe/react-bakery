@@ -40,6 +40,11 @@
   margin-left:4px
 }
 
+.header .avatar .icon {
+  --iron-icon-height: 16px;
+  --iron-icon-width: 16px;
+}
+
 
 .view {
   padding: 0 32px;

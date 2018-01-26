@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './Products.css';
 
-class Template extends Component {
+class Products extends Component {
   render() {
     return (
-      <div>
+      <div className="products">
         hello world
       </div>
     );
   }
 }
 
-export default Template;
+export default Products;
