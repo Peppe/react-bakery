@@ -8,10 +8,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## How to run
 - Clone repository
-- Run `npm install` within root folder
-- Run `bower install` within `public` folder
-- Run `npm start` within root folder
-- Run `npm run build` within the root folder to create a deployable package
+- Within root folder
+  - Run `npm install`
+  - Run `bower install`
+  - Run `npm start`
+
+## How to build to production
+  - If you are changing the path of where it will be deployed, change the homepage attribute in package.json
+  - Run `npm run build` within the root folder
+  - send the build folder to a web server and rename it appropriately (react-bakery as default)
 
 ## Table of Contents
 
