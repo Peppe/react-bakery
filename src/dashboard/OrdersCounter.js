@@ -64,12 +64,13 @@ class OrdersCounter extends Component {
         }
       }
     };
+    const json = JSON.stringify(this.options)
 
     return (
       <div className="orders-counter">
         <div className='chart-wrapper' ref={c => this.myDiv = c}>
         {this.props.displayChart &&
-            <vaadin-chart class="transparent solidchart" id="solid-gauge" ref={c => this.myChart = c} title="foo"></vaadin-chart>
+            <vaadin-chart class="transparent solidchart" id="solid-gauge" additional-options={json}></vaadin-chart>
         }
         </div>
         <div className="count-wrapper">
@@ -80,22 +81,6 @@ class OrdersCounter extends Component {
         <div className="subtitle">{this.props.subtitle}</div>
       </div>
     );
-  }
-
-  componentDidMount() {
-    const myChart = this.myChart
-    const update = () => {
-      if (myChart && myChart.update) {
-        myChart.update(this.options);
-      }
-    };
-    if (window.WebComponents.ready){
-      update();
-    } else {
-      window.addEventListener('WebComponentsReady', function (e) {
-        update();
-      });
-    }
   }
 }
 

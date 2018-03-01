@@ -77,27 +77,13 @@ class ProductSplit extends Component {
         }
       },
     }
+    const json = JSON.stringify(this.options);
 
     return (
       <div className="product-split-wrapper" >
-        <vaadin-chart id="product-split" ref={c => this.myChart = c}></vaadin-chart>
+        <vaadin-chart id="product-split" additional-options={json} ></vaadin-chart>
       </div>
     );
-  }
-  componentDidMount() {
-    const myChart = this.myChart
-    const update = () => {
-      if (myChart && myChart.update) {
-        myChart.update(this.options);
-      }
-    };
-    if (window.WebComponents.ready){
-      update();
-    } else {
-      window.addEventListener('WebComponentsReady', function (e) {
-        update();
-      });
-    }
   }
 }
 

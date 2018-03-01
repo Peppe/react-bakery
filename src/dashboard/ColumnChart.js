@@ -41,27 +41,13 @@ class ColumnChart extends Component {
         colorIndex: 1
       }]
     }
+    const json = JSON.stringify(this.options)
 
     return (
       <div className="column-chart-wrapper">
-        <vaadin-chart id="column-chart" ref={c => this.myChart = c}></vaadin-chart>
+        <vaadin-chart id="column-chart" additional-options={json}></vaadin-chart>
       </div>
     );
-  }
-  componentDidMount() {
-    const myChart = this.myChart
-    const update = () => {
-      if (myChart && myChart.update) {
-        myChart.update(this.options);
-      }
-    };
-    if (window.WebComponents.ready){
-      update();
-    } else {
-      window.addEventListener('WebComponentsReady', function (e) {
-        update();
-      });
-    }
   }
 }
 
