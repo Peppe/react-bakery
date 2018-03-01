@@ -11,7 +11,7 @@ class Order extends Component {
     </div>
     );
     return (
-      <div className="order">
+      <div className="order" onClick={this.props.onClick}>
         <div className="background">
           <div className={"badge " + order.status}><div className="badge-wrapper">{order.status}</div></div>
           <div className="time-place">

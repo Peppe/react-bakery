@@ -218,8 +218,13 @@ class List extends Component {
       }]
   };
   renderItem(index, key) {
-    return <Order key={key} order={this.state.orders[index]} />;
+    return <Order key={key} onClick={() => this.onOrderClick(index)} order={this.state.orders[index]} />;
   }
+
+  onOrderClick(index){
+    console.log("Order " + index + " was clicked");
+  }
+
   render() {
     return (
       <div className="list">
