@@ -61,7 +61,11 @@ class YearlySales extends Component {
 
     return (
       <div className="sales-chart-wrapper" >
-        <vaadin-chart class="transparent" id="sales-chart" additional-options={json}></vaadin-chart>
+        <vaadin-chart 
+          class="transparent" 
+          id="sales-chart" 
+          additional-options={json}>
+        </vaadin-chart>
       </div>
     );
   }
