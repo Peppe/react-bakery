@@ -6,11 +6,8 @@ class OrdersCounter extends Component {
     var data = parseInt(this.props.count, 10);
     var color = this.props.countColor;
     this.options = {
-      title: {
-        text: ''
-      },
       chart: {
-        type: 'solidgauge' /* should be solidgauge but throws error */
+        type: 'solidgauge'
       },
       series: [{
         name: 'Orders',
@@ -24,33 +21,17 @@ class OrdersCounter extends Component {
       tooltip: {
         enabled: 'false'
       },
-      credits: {
-        enabled: false
-      },
       yAxis: [{
-        lineWidth: 0,
-        minorTickWidth: 0,
-        tickWidth: 0,
         labels: {
           enabled: false
         },
-        center: {
-          y: 0,
-          x: 0
-        }
       }],
       plotOptions: {
         solidgauge: {
           dataLabels: {
-            y: 0,
-            borderWidth: 0,
-            useHTML: true,
-            format: '<div></div>'
+            enabled:false
           }
         }
-      },
-      exporting: { // A bit annoying that I have to explicetly disable the exporting everywhere.
-        enabled: false
       },
       pane: {
         startAngle: 0,

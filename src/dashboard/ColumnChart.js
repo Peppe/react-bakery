@@ -4,12 +4,7 @@ import './ColumnChart.css';
 class ColumnChart extends Component {
   render() {
     var categories = JSON.parse(this.props.categories);
-    var name = this.props.name;
-    var values = JSON.parse(this.props.values);
     this.options = {
-      chart: {
-        type: 'column'
-      },
       xAxis: {
         categories: categories
       },
@@ -22,7 +17,7 @@ class ColumnChart extends Component {
         enabled: false
       },
       series: [{
-        name: name,
+        name: this.props.name,
       }]
     }
     const json = JSON.stringify(this.options)
@@ -34,7 +29,7 @@ class ColumnChart extends Component {
           title={this.props.title}
           additional-options={json}>
           <vaadin-chart-series values={this.props.values} type="column"></vaadin-chart-series>
-          </vaadin-chart>
+        </vaadin-chart>
       </div>
     );
   }
