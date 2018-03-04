@@ -1,37 +1,33 @@
 .orders-counter {
-  position: relative;
   text-align: center;
-  height: calc(18vh - 64px);
-  min-height: 180px;
   padding: 10px;
 }
 
 .count-wrapper {
-  position: absolute;
-  display: block;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  text-align: center;
-  padding-top: 32px;
-}
-.count-digit {
-  font-size: 44px;
-}
-.subtitle {
-  color: var(--valo-secondary-text-color);
-  font-size: 14px;
-}
-h4 {
-  margin: 0;
-}
-.chart-wrapper {
+  position: relative;
   height: 120px;
   display: block;
 }
-#solid-gauge {
+
+.counter-chart {
   width:100%;
   height:100%;
-  overflow: hidden;
+}
+
+.count-digit {
+  position: absolute;
+  left: 0;
+  right:0;
+  font-size: 44px;
+  z-index: 2;
+  line-height:calc(120px - 10px);
+}
+
+h4 {
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--valo-secondary-text-color);
+  font-size: 14px;
 }

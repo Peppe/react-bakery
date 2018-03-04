@@ -49,15 +49,12 @@ class OrdersCounter extends Component {
 
     return (
       <div className="orders-counter">
-        <div className='chart-wrapper' ref={c => this.myDiv = c}>
-        {this.props.displayChart &&
-            <vaadin-chart class="transparent solidchart" id="solid-gauge" additional-options={json}></vaadin-chart>
-        }
+        <div className='count-wrapper'>
+          <span className="count-digit" style={{color: this.props.countColor}}>{this.props.count}</span>
+          {this.props.displayChart &&
+              <vaadin-chart class="transparent counter-chart" additional-options={json}></vaadin-chart>
+          }
         </div>
-        <div className="count-wrapper">
-          <span id="count_digit" className="count-digit" style={{color: this.props.countColor}}>{this.props.count}</span>
-        </div>
-
         <h4>{this.props.title}</h4>
         <div className="subtitle">{this.props.subtitle}</div>
       </div>
