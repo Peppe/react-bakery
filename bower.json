@@ -16,7 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "vaadin-board": "^1.0.1",
+    "vaadin-board": "^2.0.0",
     "vaadin-checkbox": "^1.0.0-beta1",
     "vaadin-charts": "6.1.0-alpha1",
     "vaadin-date-picker": "^2.0.5",
