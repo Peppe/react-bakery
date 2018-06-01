@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@vaadin/vaadin": "^10.0.0-pre1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-list": "^0.8.8",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.14"
+    "react-scripts": "^1.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -17,7 +18,7 @@
   },
   "homepage": "http://jens.app.fi/react-bakery",
   "devDependencies": {
-    "eslint": "^4.10.0",
+    "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.4.0"
   }
 }

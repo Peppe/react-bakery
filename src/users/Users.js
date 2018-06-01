@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import '@vaadin/vaadin-text-field';
+import '@vaadin/vaadin-checkbox';
+import '@vaadin/vaadin-date-picker';
 import './Users.css';
 
 class Users extends Component {

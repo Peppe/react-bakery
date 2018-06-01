@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import '@vaadin/vaadin-board/vaadin-board.js';
+import '@vaadin/vaadin-grid';
+
+// Charts do not work yet.
+// import '@vaadin/vaadin-charts';
+
 import './Dashboard.css';
 import OrdersCounter from './OrdersCounter';
 import ColumnChart from './ColumnChart';

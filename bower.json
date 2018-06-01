@@ -16,13 +16,5 @@
     "tests"
   ],
   "dependencies": {
-    "vaadin-board": "^2.0.0",
-    "vaadin-checkbox": "^2.1.1",
-    "vaadin-charts": "^6.0.1",
-    "vaadin-date-picker": "^3.0.1",
-    "vaadin-text-field": "^2.0.1",
-    "vaadin-grid": "^5.0.4",
-    "vaadin-button": "^2.0.1",
-    "vaadin-icons": "^4.1.4"
   }
 }
