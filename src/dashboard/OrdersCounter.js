@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '@vaadin/vaadin-charts';
 import './OrdersCounter.css';
 
 class OrdersCounter extends Component {
