@@ -2,7 +2,7 @@
 
 [http://jens.app.fi/react-bakery/](http://jens.app.fi/react-bakery/)
 
-This project combines React and Vaadin Elements to see how well they work together. 
+This project combines React and Vaadin Components to see how well they work together. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
@@ -10,7 +10,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Clone repository
 - Within root folder
   - Run `npm install`
-  - Run `bower install`
   - Run `npm start`
 
 ## How to build to production

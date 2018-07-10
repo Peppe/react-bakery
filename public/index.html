@@ -5,38 +5,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#000000">
-  <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
   <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-  <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
   <title>Bakery for React</title>
-  <script src="%PUBLIC_URL%/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-
-  <link rel="import" href="%PUBLIC_URL%/bower_components/polymer/polymer.html">
-  <link rel="import" href="%PUBLIC_URL%/bower_components/vaadin-button/vaadin-button.html">
-  <link rel="import" href="%PUBLIC_URL%/bower_components/vaadin-checkbox/vaadin-checkbox.html">
-  <link rel="import" href="%PUBLIC_URL%/bower_components/vaadin-text-field/vaadin-text-field.html">
-  <link rel="import" href="%PUBLIC_URL%/bower_components/vaadin-date-picker/vaadin-date-picker.html">
-  <link rel="import" href="%PUBLIC_URL%/bower_components/vaadin-grid/vaadin-grid.html">
-  <link rel="import" href="%PUBLIC_URL%/bower_components/vaadin-board/vaadin-board.html">
-  <link rel="import" href="%PUBLIC_URL%/bower_components/vaadin-charts/vaadin-chart.html">
-  <link rel="import" href="%PUBLIC_URL%/bower_components/vaadin-charts/vaadin-chart-series.html">
-
-  <link rel="import" href="%PUBLIC_URL%/bower_components/vaadin-icons/vaadin-icons.html">
-
-  <link rel="import" href="vaadin-charts-styles.html">
-
 </head>
 
 <body>
@@ -44,16 +15,69 @@
     You need to enable JavaScript to run this app.
   </noscript>
   <div id="root"></div>
-  <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+  <!-- this is needed for the built version, but breaks everything if in dev mode. -->
+  <!--<script src="%PUBLIC_URL%/polyfills/custom-elements-es5-adapter.js"></script>-->
+  <script src="%PUBLIC_URL%/polyfills/webcomponents-loader.js"></script>
+  <dom-module id="vaadin-charts-custom-theme" theme-for="vaadin-chart">
+    <template>
+      <style include="vaadin-chart-default-theme">
+         :host(.transparent) .highcharts-background {
+          fill: transparent;
+        }
+  
+        .highcharts-title {
+          fill: rgba(42, 71, 110, 0.6);
+          font-size: 16px;
+          font-weight: bold;
+        }
+  
+        :host(#column-chart) #chart {
+          height: 150px;
+        }
+  
+        :host(#column-chart) .highcharts-point {
+          fill: rgba(34, 70, 117, 0.5);
+        }
+        
+        :host(#column-chart) .highcharts-color-1.highcharts-point-hover {
+          fill: rgba(24, 119, 242, 0.5);
+        }
+  
+        :host(#column-chart) .latest {
+          fill: rgba(6, 75, 165, 0.705);
+        }
+        
+        :host(#sales-chart) .highcharts-area {
+          fill-opacity: 0.1;
+        }
+  
+        :host(#sales-chart) .highcharts-color-0 {
+          fill: #18ddf2;
+          stroke: #18ddf2;
+        }
+        
+        :host(#sales-chart) .highcharts-color-1 {
+          fill: #1877f3;
+          stroke: #1877f3;
+        }
+        
+        :host(#sales-chart) .highcharts-color-2 {
+          fill: #1bca66;
+          stroke: #1bca66;
+        }
+        
+        :host(.counter-chart) .highcharts-color-0 {
+          fill: rgb(85, 191, 59);
+          stroke: rgb(85, 191, 59);
+        }
+  
+        
+        :host(.product-split) .highcharts-data-label-connector {
+          fill: none;
+        }
+      </style>
+    </template>
+  </dom-module> 
 </body>
 
 </html>

@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import '@vaadin/vaadin-button';
+import '@vaadin/vaadin-text-field';
+import '@vaadin/vaadin-checkbox';
+import '@vaadin/vaadin-icons';
+
 import './SearchBar.css';
 
 class SearchBar extends Component {
