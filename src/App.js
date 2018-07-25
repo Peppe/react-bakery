@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './App.css';
-import Header from './header/Header';
-import Storefront from './storefront/Storefront';
-import Dashboard from './dashboard/Dashboard';
-import Products from './products/Products';
-import Users from './users/Users';
+import Header from './components/header/Header';
+import Storefront from './components/storefront/Storefront';
+import Dashboard from './components/dashboard/Dashboard';
+import Products from './components/products/Products';
+import Users from './components/users/Users';
 
 
 class App extends Component {

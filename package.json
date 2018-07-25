@@ -9,8 +9,10 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-list": "^0.8.8",
+    "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "2.0.0-next.3e165448"
+    "react-scripts": "2.0.0-next.3e165448",
+    "redux": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
