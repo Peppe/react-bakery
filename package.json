@@ -3,24 +3,58 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@vaadin/vaadin": "^10.0.0-pre1",
-    "@vaadin/vaadin-charts": "^6.1.0-pre.5",
+    "@babel/runtime": "^7.0.0",
+    "@vaadin/vaadin-board": "^2.1.0-alpha1",
+    "@vaadin/vaadin-button": "^2.1.0",
+    "@vaadin/vaadin-charts": "^6.2.0-alpha1",
+    "@vaadin/vaadin-checkbox": "^2.2.1",
+    "@vaadin/vaadin-combo-box": "^4.2.0-alpha7",
+    "@vaadin/vaadin-context-menu": "^4.2.0-beta2",
+    "@vaadin/vaadin-date-picker": "^3.3.0-beta1",
+    "@vaadin/vaadin-dialog": "^2.2.0-beta1",
+    "@vaadin/vaadin-dropdown-menu": "^1.2.0-beta1",
+    "@vaadin/vaadin-form-layout": "^2.1.0",
+    "@vaadin/vaadin-grid": "^5.2.0-beta2",
+    "@vaadin/vaadin-icons": "^4.2.0",
+    "@vaadin/vaadin-item": "^2.1.0",
+    "@vaadin/vaadin-list-box": "^1.1.0",
+    "@vaadin/vaadin-lumo-styles": "^1.1.1",
+    "@vaadin/vaadin-notification": "^1.2.0-beta1",
+    "@vaadin/vaadin-ordered-layout": "^1.1.0",
+    "@vaadin/vaadin-progress-bar": "^1.1.0",
+    "@vaadin/vaadin-radio-button": "^1.1.1",
+    "@vaadin/vaadin-split-layout": "^4.1.0",
+    "@vaadin/vaadin-tabs": "^2.1.0",
+    "@vaadin/vaadin-text-field": "^2.1.2",
+    "@vaadin/vaadin-upload": "^4.2.0",
     "@webcomponents/webcomponentsjs": "^2.0.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-list": "^0.8.8",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "2.0.0-next.3e165448",
-    "redux": "^4.0.0"
+    "react-scripts": "2.0.5",
+    "redux": "^4.0.0",
+    "vendor-copy": "^2.0.0"
   },
   "scripts": {
+    "postinstall": "vendor-copy",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "homepage": "http://jens.app.fi/react-bakery",
+  "vendorCopy": [
+    {
+      "from": "node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js",
+      "to": "public/vendor/custom-elements-es5-adapter.js"
+    },
+    {
+      "from": "node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js",
+      "to": "public/vendor/webcomponents-bundle.js"
+    }
+  ],
+  "homepage": "http://jens.app.fi/build",
   "devDependencies": {
     "eslint-plugin-react": "^7.4.0",
     "react-scripts-plugin-no-minify": "^0.3.2"

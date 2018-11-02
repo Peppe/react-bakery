@@ -12,11 +12,6 @@ class Header extends Component {
         <div className="name">Café<br />Sunshine</div>
         <div className="views">
             <div className="container">
-              <vaadin-tabs>
-                <vaadin-tab>Tab one</vaadin-tab>
-                <vaadin-tab>Tab two</vaadin-tab>
-                <vaadin-tab>Tab three</vaadin-tab>
-              </vaadin-tabs>
               <NavLink to={baseUrl + "/storefront"} className="view" activeClassName="active">Storefront</NavLink>
               <NavLink exact to={baseUrl + "/"} className="view" activeClassName="active">Dashboard</NavLink>
               <NavLink to={baseUrl + "/users"} className="view" activeClassName="active">Users</NavLink>
